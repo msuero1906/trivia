@@ -3,7 +3,36 @@ import "../css/App.css";
 import data from "../sample_data.json";
 
 function App() {
-  return <div className="app">Trivia!</div>;
+  let questionNumber = 0;
+  return (
+    <div className="app">
+      <h2> Trivia! </h2>
+      <Question
+        question={data[questionNumber].question.text}
+        choices={data[questionNumber].question.choices}
+      />
+      <NextQuestion />
+    </div>
+  );
+}
+
+function Question(props) {
+  return (
+    <div>
+      {props.question}
+      {props.choices.map(function (currentAnswer) {
+        return <Answer answer={currentAnswer} />;
+      })}
+    </div>
+  );
+}
+
+function NextQuestion() {
+  return <button>Next Question</button>;
+}
+
+function Answer(props) {
+  return <div> {props.answer} </div>;
 }
 
 export default App;
