@@ -4,6 +4,8 @@ import data from "../sample_data.json";
 
 function App() {
   let questionNumber = 0;
+  const [answerDisplayed, setAnswerDisplayed] = useState(false);
+
   return (
     <div className="app">
       <h2> Trivia! </h2>
@@ -11,6 +13,8 @@ function App() {
         question={data[questionNumber].question.text}
         choices={data[questionNumber].question.choices}
       />
+      <button>Click for the correct answer</button>
+      <br />
       <NextQuestion />
     </div>
   );
@@ -23,6 +27,7 @@ function Question(props) {
       {props.choices.map(function (currentAnswer) {
         return <Answer answer={currentAnswer} />;
       })}
+      button
     </div>
   );
 }
