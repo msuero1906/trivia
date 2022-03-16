@@ -3,8 +3,8 @@ import "../css/App.css";
 import data from "../sample_data.json";
 
 function App() {
-  let questionNumber = 0;
   const [answerDisplayed, setAnswerDisplayed] = useState(false);
+  const [questionNumber, setQuestionNumber] = useState(0);
 
   return (
     <div className="app">
@@ -13,7 +13,15 @@ function App() {
         question={data[questionNumber].question.text}
         choices={data[questionNumber].question.choices}
       />
-      <button>Click for the correct answer</button>
+      <button onClick={() => setAnswerDisplayed(true)}>
+        Click for the correct answer
+      </button>
+      <br />
+      {
+        data[questionNumber].question.choices[
+          data[questionNumber].question.correct_choice_index
+        ]
+      }
       <br />
       <NextQuestion />
     </div>
@@ -27,7 +35,6 @@ function Question(props) {
       {props.choices.map(function (currentAnswer) {
         return <Answer answer={currentAnswer} />;
       })}
-      button
     </div>
   );
 }

@@ -44,7 +44,7 @@ In this unit, coders will work in groups to build a project using HTML, CSS, Rea
 ### Goal 2: Render a button on the screen that reveals the correct answer when clicked.
 
 - [x] Using `useState` in `<App />`, create a boolean state variable called `answerDisplayed` to keep track of whether the correct answer is shown.
-- [ ] Add a button to the App component that will update the state to display the correct answer when it is clicked.
+- [x] Add a button to the App component that will update the state to display the correct answer when it is clicked.
 - [ ] Create an onClick function that sets the state to display the correct answer choice when your button is clicked.
   - [ ] HINT: Access the correct answer choice using `sample_data.json`.
 
@@ -54,7 +54,7 @@ In this unit, coders will work in groups to build a project using HTML, CSS, Rea
 
 ### Goal 1: Add functionality to your "Next Question" button so that it renders the next question when clicked.
 
-- [ ] Add state to `<App />` using the `useState` React hook to keep track of the current question number.
+- [x] Add state to `<App />` using the `useState` React hook to keep track of the current question number.
   - [ ] Replace the current question number variable that you wrote in Day 1.
 - [ ] Create a function that updates the state to the next question number.
 - [ ] Make a prop on `<NextQuestion />` to pass the prop down to the button element to call that function when the button is clicked.
