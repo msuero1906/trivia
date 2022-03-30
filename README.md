@@ -45,8 +45,8 @@ In this unit, coders will work in groups to build a project using HTML, CSS, Rea
 
 - [x] Using `useState` in `<App />`, create a boolean state variable called `answerDisplayed` to keep track of whether the correct answer is shown.
 - [x] Add a button to the App component that will update the state to display the correct answer when it is clicked.
-- [ ] Create an onClick function that sets the state to display the correct answer choice when your button is clicked.
-  - [ ] HINT: Access the correct answer choice using `sample_data.json`.
+- [x] Create an onClick function that sets the state to display the correct answer choice when your button is clicked.
+  - [x] HINT: Access the correct answer choice using `sample_data.json`.
 
 > ![Day 2.5 goal - unanswered](https://i.imgur.com/JI6GroE.png) >![Day 2.5 goal - answered](https://i.imgur.com/rufYX84.png)
 
@@ -55,11 +55,11 @@ In this unit, coders will work in groups to build a project using HTML, CSS, Rea
 ### Goal 1: Add functionality to your "Next Question" button so that it renders the next question when clicked.
 
 - [x] Add state to `<App />` using the `useState` React hook to keep track of the current question number.
-  - [ ] Replace the current question number variable that you wrote in Day 1.
-- [ ] Create a function that updates the state to the next question number.
-- [ ] Make a prop on `<NextQuestion />` to pass the prop down to the button element to call that function when the button is clicked.
-- [ ] Check that every part of your question and answer updates to reflect the current question number.
-- [ ] Reset the state of `answerDisplayed` when the Next Question button is clicked so the correct answer stops being displayed.
+  - [x] Replace the current question number variable that you wrote in Day 1.
+- [x] Create a function that updates the state to the next question number.
+- [x] Make a prop on `<NextQuestion />` to pass the prop down to the button element to call that function when the button is clicked.
+- [x] Check that every part of your question and answer updates to reflect the current question number.
+- [x] Reset the state of `answerDisplayed` when the Next Question button is clicked so the correct answer stops being displayed.
 - [ ] BONUS: Add [conditional rendering](https://reactjs.org/docs/conditional-rendering.html) to hide `<NextQuestion />` when there are no more next questions.
 
 > ![Day 3.0 goal](https://i.imgur.com/fetraPF.png) >![Day 3.0 with bonus](https://i.imgur.com/GruM8g2.png)

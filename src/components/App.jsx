@@ -1,6 +1,7 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import "../css/App.css";
 import data from "../sample_data.json";
+import Answer from "./Answer";
 
 function App() {
   const [answerDisplayed, setAnswerDisplayed] = useState(false);
@@ -17,13 +18,15 @@ function App() {
         Click for the correct answer
       </button>
       <br />
-      {
+      {answerDisplayed === true &&
         data[questionNumber].question.choices[
           data[questionNumber].question.correct_choice_index
-        ]
-      }
+        ]}
       <br />
-      <NextQuestion />
+      <NextQuestion
+        setQuestionNumber={setQuestionNumber}
+        setAnswerDisplayed={setAnswerDisplayed}
+      />
     </div>
   );
 }
@@ -39,12 +42,12 @@ function Question(props) {
   );
 }
 
-function NextQuestion() {
-  return <button>Next Question</button>;
-}
-
-function Answer(props) {
-  return <div> {props.answer} </div>;
+function NextQuestion(props) {
+  function handleNextQuestionClick() {
+    props.setQuestionNumber((questionNumber) => questionNumber + 1);
+    props.setAnswerDisplayed(false);
+  }
+  return <button onClick={handleNextQuestionClick}>Next Question</button>;
 }
 
 export default App;
