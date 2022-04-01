@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../css/App.css";
 import data from "../sample_data.json";
 import Answer from "./Answer";
+import Question from "./Question";
+import NextQuestion from "./NextQuestion";
 
 function App() {
   const [answerDisplayed, setAnswerDisplayed] = useState(false);
@@ -29,25 +31,6 @@ function App() {
       />
     </div>
   );
-}
-
-function Question(props) {
-  return (
-    <div>
-      {props.question}
-      {props.choices.map(function (currentAnswer) {
-        return <Answer answer={currentAnswer} />;
-      })}
-    </div>
-  );
-}
-
-function NextQuestion(props) {
-  function handleNextQuestionClick() {
-    props.setQuestionNumber((questionNumber) => questionNumber + 1);
-    props.setAnswerDisplayed(false);
-  }
-  return <button onClick={handleNextQuestionClick}>Next Question</button>;
 }
 
 export default App;
